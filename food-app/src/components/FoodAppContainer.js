@@ -16,23 +16,23 @@ const store = createStore(rootReducer)
 const FoodAppContainer = ({ history, match }) => {
     return (
         <Provider store={store}>
-        <Router>
-            <Route 
-                path="/"
-                exact={true}
-                render={() => <RestaurantLookupContainer></RestaurantLookupContainer>}/>
-            <Route 
-                path="/restaurants/:restaurantId"
-                exact={true}
-                render={() => <RestaurantInfoContainer></RestaurantInfoContainer>}/>
-            <Route
-                path="/restaurants"
-                exact={true}
-                render={() => <RestaurantListContainer></RestaurantListContainer>}/>
-        </Router>
-    </Provider>
+            <Router>
+                <Route
+                    path="/"
+                    exact={true}
+                    render={() => <RestaurantLookupContainer></RestaurantLookupContainer>} />
+                <Route
+                    path="/restaurants/:restaurantId"
+                    exact={true}
+                    render={() => <RestaurantInfoContainer></RestaurantInfoContainer>} />
+                <Route
+                    path="/restaurants"
+                    exact={true}
+                    render={() => <RestaurantListContainer></RestaurantListContainer>} />
+            </Router>
+        </Provider>
     )
-    
+
 }
 
 export default FoodAppContainer;

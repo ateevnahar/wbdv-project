@@ -7,6 +7,7 @@ const initialState = {
 const restaurantReducer = (state = initialState, action) => {
     switch (action.type) {
         case "UPDATE_RESTAURANT_LIST":
+            console.log(action.restaurants)
             return {
                 ...state,
                 restaurants: action.restaurants,
